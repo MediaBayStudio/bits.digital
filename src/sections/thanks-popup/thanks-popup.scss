@@ -1,0 +1,40 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+
+.thanks-popup {
+  align-items: center;
+
+  &__cnt {
+    width: 280px;
+    padding: 40px 20px 30px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid $accent;
+    position: relative;
+  }
+
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 25px;
+    color: $accent;
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &__status-img {
+    
+  }
+
+  &__title {
+    margin: 15px 0 10px;
+  }
+
+  &__descr {}
+}

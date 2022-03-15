@@ -1,0 +1,33 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-cases {
+  &__title {}
+
+  &__cases {}
+
+  &__loadmore {}
+}
+
+.cases {
+  &__case {}
+}
+
+.case {
+
+  &__pic {}
+
+  &__img {
+    height: 334px;
+  }
+
+  &__title {}
+
+  &__category {
+
+    &:empty {}
+
+    &:nth-last-of-type(n+2) {}
+  }
+}

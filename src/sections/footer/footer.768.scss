@@ -1,0 +1,51 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.ftr {
+  &__logo-img {
+    margin: 0;
+  }
+
+  &__address {
+    margin: 0 0 25px;
+    max-width: 185px;
+  }
+
+  &__contacts {
+    margin: 0;
+  }
+
+  &__tel {}
+
+  &__copyright {
+    width: 75%;
+  }
+
+  &__dev {
+    margin: 0;
+    flex: 0 1 auto;
+  }
+
+  &__dev-text {}
+
+  &__dev-link {
+    &::before {}
+
+    &.lazyloaded {
+      &::before {}
+    }
+
+    &:hover {
+      &::before {}
+    }
+  }
+}
+
+.ftr-inner {
+  padding: 30px $--page-wrapper-padding-768 20px;
+  flex-flow: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-align: left;
+}

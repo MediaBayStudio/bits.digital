@@ -1,0 +1,61 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-contact {
+  .sect-inner {}
+
+  .sect-left {
+    padding: 50px 60px 100px 0;
+  }
+
+  .sect-right {}
+
+  &__title {
+    padding: $--page-wrapper-padding-1280;
+    margin: 0 -#{$--page-wrapper-padding-1280};
+    width: calc(100% + #{$--page-wrapper-padding-1280} * 2);
+    &.sloping-lines {
+      &::after {
+        width: 580px;
+        height: 95px;
+        background-image: repeating-linear-gradient(-45deg,transparent 0,transparent 14px,#acacac 14px,#acacac 15px) !important;
+      }
+    }
+  }
+
+  &__descr {
+    max-width: 390px;
+    font-size: 32px;
+  }
+
+  &__links {}
+
+  &__instagram {}
+
+  &__facebook {}
+
+  &__form {
+    .field {
+      margin: 0 0 40px;
+      &:last-of-type {
+        margin: 0 0 50px;
+      }
+      &__inp {}
+
+      &__textarea {}
+    }
+
+    .field-name {}
+
+    .field-email {}
+
+    .field-tel {}
+
+    .field-msg {}
+
+    .btn {
+      padding: 21px 0;
+    }
+  }
+}

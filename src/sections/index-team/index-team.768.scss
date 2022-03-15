@@ -1,0 +1,50 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-team {
+  >.sect-inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    border: 0;
+    padding: 0;
+    margin: 40px auto 0 0;
+  }
+
+  &__team {
+    margin: 0 -20px 0 0;
+    width: 460px;
+    flex-flow: wrap;
+  }
+
+  &__loadmore {
+    margin: 45px 0 0;
+    padding: 12px 0;
+  }
+}
+
+.team {}
+
+.teammates {
+  &__teammate {
+    margin: 30px 20px 0 0;
+    width: calc(50% - 20px);
+  }
+}
+
+.teammate {
+  &__pic {}
+
+  &__img {
+    height: 243px;
+  }
+
+  &__title {
+    font-size: 20px;
+  }
+
+  &__role {}
+}

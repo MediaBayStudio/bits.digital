@@ -1,0 +1,29 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.hdr {
+  // left: $--page-wrapper-padding-768;
+  // width: calc(100% - #{$--page-wrapper-padding-768 * 2});
+  height: $--header-height-768;
+
+  &__logo-img {}
+
+  &__nav {
+    .nav-link {}
+  }
+
+  &__nav-list {}
+
+  &__nav-li {}
+
+  &__burger {
+    $--burger-width: 30px;
+    $--burger-height: 15px;
+    $--burger-padding: 5px;
+    margin: 0 #{-$--burger-padding} 0 0;
+    padding: $--burger-padding;
+    width: $--burger-width + $--burger-padding * 2;
+    height: $--burger-height + $--burger-padding * 2;
+  }
+}

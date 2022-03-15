@@ -1,0 +1,98 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+body.isSafari {
+  .index-contact__title {
+    &::after {
+      background-size: 500%;
+      animation-duration: 15s;
+    }
+  }
+}
+
+.index-contact {
+  .sect-inner {}
+
+  .sect-left {
+    padding: 30px $--page-wrapper-padding-320;
+  }
+
+  .sect-right {}
+
+  &__title {
+    margin: 0 #{-$--page-wrapper-padding-320};
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% + #{$--page-wrapper-padding-320 * 2});
+    border-bottom: 1px solid $--decor-border-color;
+
+    &.sloping-lines {
+      &::after {
+        width: 100px;
+        height: 30px;
+        background-image: repeating-linear-gradient(-45deg,transparent 0,transparent 3%, $darkGrey 3%,$darkGrey 4%) !important;
+      }
+    }
+  }
+
+  &__descr {
+    margin: 0 0 20px;
+    font: bold 18px/1.4 $--heading-font;
+    letter-spacing: 0.02em;
+    color: $darkGrey;
+  }
+
+  &__links {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    font-size: 15px;
+  }
+
+  &__instagram,
+  &__facebook {
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color .5s;
+
+    &:hover {
+      border-bottom-color: currentColor;
+    }
+  }
+
+  &__instagram {}
+
+  &__facebook {
+    margin: 15px 0 0;
+  }
+
+  &__form {
+    .field {
+      margin: 0 0 25px;
+      width: 100%;
+
+      &:last-of-type {
+        margin: 0 0 40px;
+      }
+
+      &__inp {}
+
+      &__textarea {}
+    }
+
+    .field-name {}
+
+    .field-email {}
+
+    .field-tel {}
+
+    .field-msg {}
+
+    .btn {
+      width: 100%;
+      padding: 9px 0;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-team {
+  &__title {
+    margin: 0 -#{$--page-wrapper-padding-320};
+    padding: 15px $--page-wrapper-padding-320;
+    border-bottom: 1px solid $--decor-border-color;
+  }
+
+  &__team {
+    margin: 10px 0 0;
+    display: flex;
+    flex-flow: column;
+  }
+
+  &__loadmore {
+    margin: 30px 0 0;
+    width: 100%;
+    padding: 9px 0;
+
+    &.hide {
+      display: none;
+    }
+  }
+}
+
+.team {}
+
+.teammates {
+  &__teammate {
+    margin: 30px 0 0;
+  }
+}
+
+.teammate {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+
+  &__pic {
+    margin: 0 0 10px;
+  }
+
+  &__img {
+    object-fit: cover;
+    height: responsive('320->575', '276->464');
+  }
+
+  &__title {
+    font: 600 18px/1.4 $--heading-font;
+    letter-spacing: 0.02em;
+  }
+
+  &__role {
+    margin: 5px 0 0;
+    font: 300 14px/1.4 $--text-font;
+    
+  }
+}

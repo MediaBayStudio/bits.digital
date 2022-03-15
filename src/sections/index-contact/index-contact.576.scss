@@ -1,0 +1,39 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-contact {
+  .sect-inner {}
+
+  .sect-left {}
+
+  .sect-right {}
+
+  &__title {}
+
+  &__descr {}
+
+  &__links {}
+
+  &__instagram {}
+
+  &__facebook {}
+
+  &__form {
+    .field {
+      &__inp {}
+
+      &__textarea {}
+    }
+
+    .field-name {}
+
+    .field-email {}
+
+    .field-tel {}
+
+    .field-msg {}
+
+    .btn {}
+  }
+}

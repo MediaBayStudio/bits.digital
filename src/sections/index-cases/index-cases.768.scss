@@ -1,0 +1,72 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-cases {
+  .sect-inner {
+    overflow: hidden;
+  }
+
+  &__title {
+    padding: 30px 20px;
+    .ellipses-svg {
+      width: 190px;
+      height: 60px;
+    }
+  }
+
+  &__cases {
+    margin: 0 -20px 0 0;
+    width: calc(100% + 20px);
+    flex-flow: wrap;
+  }
+
+  &__loadmore {
+    margin: 45px 0 0;
+    padding: 12px 0;
+  }
+}
+
+.cases {
+  &__case {
+    margin: 30px 20px 0 0;
+    width: calc(50% - 20px);
+  }
+}
+
+.case {
+
+  &__pic {}
+
+  &__img {
+    width: 333px;
+    height: 247px;
+  }
+
+  &__title {
+    font-size: 18px;
+  }
+
+  &__category {
+    // margin: 15px 0 0;
+
+    &:empty {}
+
+    &:nth-last-of-type(n+2) {}
+  }
+}
+
+
+// @supports (--css: variables) {
+//   .index-cases__cases {
+//     --cases-margin: 20px;
+//     --cases-minus-margin: -20px;
+//     margin: 0 var(--cases-minus-margin) 0 0;
+//     width: calc(100% + var(--cases-margin));
+//   }
+
+//   .cases__case {
+//     margin: 30px var(--cases-margin) 0 0;
+//     width: calc(50% - var(--cases-margin));
+//   }
+// }

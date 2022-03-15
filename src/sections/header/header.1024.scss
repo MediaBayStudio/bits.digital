@@ -1,0 +1,60 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.hdr {
+  &__inner {
+    padding: 0 30px;
+  }
+
+  &__logo-img {
+    width: 58px;
+    height: 31px;
+  }
+
+  &__nav {
+    // $--sect-left-width-1024 declared in variables.scss
+    margin: 0 -30px 0 0;
+    display: block;
+    width: calc(100% - #{$--sect-left-width-1024 - 30px});
+    height: 100%;
+    border-left: 1px solid $--decor-border-color;
+    font: 20px/1 $--heading-font;
+    letter-spacing: 0.03em;
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      transition: color .5s;
+
+      &:hover {
+        color: $accent;
+      }
+    }
+  }
+
+  &__nav-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  &__nav-li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    &:nth-last-child(n+2) {
+      border-right: 1px solid $--decor-border-color;
+    }
+  }
+
+  &__burger {
+    display: none;
+  }
+}

@@ -1,0 +1,32 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-services {
+  &__title {}
+
+  &__items {}
+}
+
+.services {
+  &__service {}
+}
+
+.service {
+  &:nth-last-child(n+2) {
+    margin: 0 0 50px;
+  }
+
+  &__icon {
+    margin: 0 0 30px;
+    >.rhombus-svg {}
+
+    >.triangle-svg {}
+
+    >.ellipse-svg {}
+  }
+
+  &__title {}
+
+  &__descr {}
+}

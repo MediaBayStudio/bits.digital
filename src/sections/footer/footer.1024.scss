@@ -1,0 +1,45 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.ftr {
+  &__logo-img {
+    width: 58px;
+    height: 24px;
+  }
+
+  &__address {
+    max-width: 260px;
+  }
+
+  &__contacts {}
+
+  &__tel {}
+
+  &__copyright {
+    font-size: 14px;
+  }
+
+  &__dev {}
+
+  &__dev-text {
+    font-size: 14px;
+  }
+
+  &__dev-link {
+    &::before {
+      width: 96px;
+      height: 16px;
+    }
+
+    &.lazyloaded {
+      &::before {}
+    }
+
+    &:hover {
+      &::before {}
+    }
+  }
+}
+
+.ftr-inner {}

@@ -1,0 +1,55 @@
+{
+  "name": "start",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MediaBayStudio/start.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MediaBayStudio/start/issues"
+  },
+  "homepage": "https://github.com/MediaBayStudio/start#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/plugin-transform-arrow-functions": "^7.13.0",
+    "@babel/plugin-transform-block-scoping": "^7.14.2",
+    "@babel/plugin-transform-template-literals": "^7.13.0",
+    "colors": "^1.4.0",
+    "fs": "0.0.1-security",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-beautify": "^3.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-flatten": "^0.4.0",
+    "gulp-html-minifier": "^0.1.8",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-include": "^2.4.1",
+    "gulp-remove-logging": "^1.2.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-shell": "^0.8.0",
+    "gulp-strip-comments": "^2.5.2",
+    "gulp-svgmin": "^4.1.0",
+    "gulp-tap": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
+    "mkdirpsync": "^0.1.0",
+    "path": "^0.12.7",
+    "sass": "^1.49.7",
+    "uniqid": "^5.4.0",
+    "yargs": "^17.0.1"
+  },
+  "dependencies": {
+    "jshint": "^2.13.4"
+  }
+}

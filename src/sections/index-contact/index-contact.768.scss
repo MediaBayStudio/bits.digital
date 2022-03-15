@@ -1,0 +1,68 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+body.isSafari {
+  .index-contact__title {
+    &::after {
+      background-size: 200%;
+      animation-duration: 18s;
+    }
+  }
+}
+
+.index-contact {
+  .sect-inner {}
+
+  .sect-left {
+    padding: 30px 60px 60px 0;
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+  }
+
+  .sect-right {
+    width: 50%;
+  }
+
+  &__title {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    &.sloping-lines {
+      &::after {
+        width: 325px;
+        height: 55px;
+        background-image: repeating-linear-gradient(-45deg,transparent 0,transparent 8px,#acacac 8px,#ACACAC 10px)!important;
+      }
+    }
+  }
+
+  &__descr {
+    margin: 0 0 auto;
+    font-size: 20px;
+  }
+
+  &__links {}
+
+  &__instagram {}
+
+  &__facebook {}
+
+  &__form {
+    .field {
+      &__inp {}
+
+      &__textarea {}
+    }
+
+    .field-name {}
+
+    .field-email {}
+
+    .field-tel {}
+
+    .field-msg {}
+
+    .btn {}
+  }
+}

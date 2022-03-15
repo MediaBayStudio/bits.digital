@@ -1,0 +1,32 @@
+@import 'variables';
+
+.container {
+  padding: 0 $--sect-padding-hr-320;
+}
+
+@media (min-width:575.98px) {
+  .container {
+    padding: 0 $--sect-padding-hr-576;
+  }
+}
+
+@media (min-width:767.98px) {
+  .container {
+    // padding: 0;
+    padding: 0 $--sect-padding-hr-768;
+  }
+}
+
+@media (min-width:1023.98px) {
+  .container {
+    padding: 0 $--sect-padding-hr-1024;
+  }
+}
+
+@media (min-width:1279.98px) {
+  .container {
+    // padding: 0 $--sect-padding-hr-1280;
+    // padding: 0 calc(50vw - 660px);
+    padding: 0 calc(50vw - 640px);
+  }
+}

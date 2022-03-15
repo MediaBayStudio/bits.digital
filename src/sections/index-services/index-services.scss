@@ -1,0 +1,30 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-services {
+  &__title {}
+
+  &__items {}
+}
+
+.services {
+  &__service {}
+}
+
+.service {
+  &:nth-last-child(n+2) {
+    margin: 0 0 35px;
+  }
+
+  &__icon {
+    margin: 0 0 20px;
+    display: flex;
+  }
+
+  &__title {
+    margin: 0 0 20px;
+  }
+
+  &__descr {}
+}

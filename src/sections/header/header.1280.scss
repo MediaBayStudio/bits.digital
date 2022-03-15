@@ -1,0 +1,32 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.hdr {
+  // left: $--page-wrapper-padding-1280;
+  // width: calc(100% - #{$--page-wrapper-padding-1280 * 2});
+  height: $--header-height-1280;
+
+  &__inner {
+    padding: 0 50px;
+  }
+
+  &__logo-img {
+    width: 87px;
+    height: 47px;
+  }
+
+  &__nav {
+    margin: 0 -50px 0 0;
+    width: calc(100% - #{$--sect-left-width-1280 - 50px});
+    .nav-link {
+      // padding: 0 60px;
+    }
+  }
+
+  &__nav-list {}
+
+  &__nav-li {}
+
+  &__burger {}
+}

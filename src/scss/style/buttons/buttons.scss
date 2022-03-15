@@ -1,0 +1,29 @@
+@import '../../assets/colors';
+@import '../../assets/mixins';
+@import '../../assets/variables';
+
+.btn {
+  font: 16px/1.5 $--heading-font;
+  letter-spacing: 0.03em;
+}
+
+.btn-ol {
+  background: transparent;
+  transition: background .5s, color .5s;
+}
+
+.btn-green {
+  border: 1px solid $accent;
+  color: $accent;
+
+  &:hover {
+    color: $black;
+    background: $accent;
+  }
+
+  &:active {
+    transition: none;
+    background: darken($accent, 30%);
+    border-color: darken($accent, 30%);
+  }
+}

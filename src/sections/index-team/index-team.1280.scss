@@ -1,0 +1,32 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-team {
+  &__title {}
+
+  &__team {
+    width: 820px;
+  }
+  &__loadmore {
+    margin: 70px 0 0;
+    padding: 21px 0;
+  }
+}
+.team {}
+
+.teammates {
+  &__teammate {}
+}
+
+.teammate {
+  &__pic {}
+
+  &__img {
+    height: 440px;
+  }
+
+  &__title {}
+
+  &__role {}
+}

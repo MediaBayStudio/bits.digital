@@ -1,0 +1,33 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.ftr {
+  &__logo-img {}
+
+  &__address {}
+
+  &__contacts {}
+
+  &__tel {}
+
+  &__copyright {}
+
+  &__dev {}
+
+  &__dev-text {}
+
+  &__dev-link {
+    &::before {}
+
+    &.lazyloaded {
+      &::before {}
+    }
+
+    &:hover {
+      &::before {}
+    }
+  }
+}
+
+.ftr-inner {}

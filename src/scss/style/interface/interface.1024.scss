@@ -1,0 +1,67 @@
+@import '../../assets/colors';
+@import '../../assets/mixins';
+@import '../../assets/variables';
+
+body {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+#page-wrapper {
+  // &::before {
+  //   left: calc(50vw - 483px);
+  // }
+
+  // &::after {
+  //   right: calc(50vw - 483px);
+  // }
+}
+
+// Sections
+// .sect,
+// .sect-two-col>.sect-right {
+// padding-bottom: 80px;
+// }
+
+body.isSafari {
+  .sloping-lines {
+    &::after {
+      background-image: url('img/sloping-lines.desktop.svg');
+    }
+  }
+}
+
+.sect {
+  &-two-col {}
+
+  &-bg {}
+
+  &-inner {
+    padding: 0 30px 70px;
+  }
+
+  &-h1 {
+    font-size: 101px;
+  }
+
+  &-h2 {
+    font-size: 40px;
+  }
+
+  &-h3 {
+    font-size: 26px;
+  }
+
+  &-descr {}
+
+  // $--sect-left-width-1024 declared in variables.scss
+
+  &-left {
+    width: $--sect-left-width-1024;
+  }
+
+  &-right {
+    padding: 35px 0 70px 30px;
+    width: calc(100% - #{$--sect-left-width-1024});
+  }
+}

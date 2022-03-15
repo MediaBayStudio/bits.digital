@@ -1,0 +1,56 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+
+.hdr {
+  // $--header-height-320 declared in variables.scss
+  height: $--header-height-320;
+  width: 100%;
+  // width: calc(100% - #{$--page-wrapper-padding-320 * 2});
+  // display: flex;
+  // align-items: center;
+  top: 0;
+  left: 0;
+  // left: $--page-wrapper-padding-320;
+  position: fixed;
+  background: $black;
+  z-index: 2;
+
+  &__inner {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $--decor-border-color;
+    border-top: 0;
+    border-bottom: 0;
+  }
+
+  &__logo-img {
+    margin: 0 auto 0 0;
+    object-fit: contain;
+  }
+
+  &__nav {
+    display: none;
+
+    .nav-link {}
+  }
+
+  &__nav-list {}
+
+  &__nav-li {}
+
+  &__burger {
+    $--burger-width: 24px;
+    $--burger-height: 13px;
+    $--burger-padding: 5px;
+    margin: 0 #{-$--burger-padding} 0 0;
+    padding: $--burger-padding;
+    width: $--burger-width + $--burger-padding * 2;
+    height: $--burger-height + $--burger-padding * 2;
+    background: url('../img/icon-burger.svg') content-box center/contain no-repeat;
+  }
+}

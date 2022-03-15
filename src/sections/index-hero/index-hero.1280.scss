@@ -1,0 +1,34 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-hero {
+
+  // padding: 70px calc(50vw - 595px) 140px;
+  // padding: 70px calc(50% - 535.5px) 140px;
+  >.sect-inner {
+    padding: 70px 115px 140px;
+  }
+
+  &__title {
+    margin: 0 0 30px;
+
+    &.sloping-lines {
+      &::after {
+        top: 55px;
+        width: 327px;
+        height: 95px;
+      }
+    }
+  }
+
+  &__descr {
+    &.sloping-lines {
+      padding-left: calc(55% + 60px);
+
+      &::after {
+        width: 54%;
+      }
+    }
+  }
+}

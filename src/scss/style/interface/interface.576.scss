@@ -1,0 +1,15 @@
+
+@import '../../assets/colors';
+@import '../../assets/mixins';
+@import '../../assets/variables';
+
+.sect-underline {
+  &::after {
+    // left: $--sect-padding-hr-minus-576;
+  }
+}
+
+.sect,
+.sect-two-col {
+  // margin: 0 $--page-wrapper-padding-320;
+}

@@ -1,0 +1,75 @@
+@import '../../assets/colors';
+@import '../../assets/mixins';
+@import '../../assets/variables';
+
+body {
+  font-size: 16px;
+}
+
+#page-wrapper {
+  // padding: $--header-height-768 $--page-wrapper-padding-768 0;
+
+  padding: $--header-height-768 0 0;
+  // &::before {
+  // left: $--page-wrapper-padding-768;
+  // }
+
+  // &::after {
+  // right: $--page-wrapper-padding-768;
+  // }
+}
+
+body.isSafari {
+  .sloping-lines {
+    &::after {
+      background-image: url('img/sloping-lines.tablet.svg');
+    }
+  }
+}
+
+// Sections
+.sect {
+  &-two-col {
+    >.sect-inner {
+      padding-bottom: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &-bg {}
+
+  &-h1 {
+    font-size: 84px;
+    letter-spacing: 0.05em;
+  }
+
+  &-h2 {
+    font-size: 28px;
+  }
+
+  &-h3 {
+    font-size: 20px;
+  }
+
+  &-descr {}
+
+  &-left {
+    margin: 0;
+    padding: 35px 0 0;
+    width: 230px;
+    border-bottom: 0;
+  }
+
+  &-right {
+    padding: 35px 0 60px 20px;
+    width: calc(100% - 230px);
+    border-left: 1px solid $--decor-border-color;
+  }
+
+  &-underline {
+    // &::after {
+    // left: ($--page-wrapper-padding-768 + $--page-wrapper-padding-320) * -1;
+    // }
+  }
+}

@@ -1,0 +1,13 @@
+
+@import 'assets/colors';
+@import 'assets/mixins';
+@import 'assets/variables';
+
+#preview-action,
+#titlediv div.inside{
+  display: none;
+}
+
+.post-type-case .acf-field[data-name="img"] img {
+  max-width: 370px;
+}

@@ -1,0 +1,98 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.case-popup {
+  &__cnt {}
+
+  &__hdr {
+
+    &-inner {
+      padding: 0 $--page-wrapper-padding-1024;
+    }
+  }
+
+  &__close {
+    font-size: 20px;
+  }
+
+  &__heading {
+
+    &-inner {
+      padding: 40px $--page-wrapper-padding-1024 70px
+    }
+  }
+
+  &__title {
+    margin: 0 0 40px;
+    font-size: 94px;
+  }
+
+  &__body {
+    &-inner {
+      padding: 45px $--page-wrapper-padding-1024;
+    }
+
+    img {}
+
+    h2 {
+      margin: -10px 0 0;
+      font-size: 40px;
+
+      &:not(:last-child) {}
+    }
+
+    h3 {
+      font-size: 54px;
+    }
+
+    h4 {
+      font-size: 30px;
+    }
+
+    h2,
+    h3,
+    h4,
+    p {
+
+      +h2,
+      +h3,
+      +h4 {}
+    }
+
+    p {
+      &:not(:last-child) {}
+    }
+
+    ol,
+    ul {
+
+      &:not(:last-child) {}
+
+      &:not([class]) {
+        li {
+          &:not(:last-child) {}
+        }
+      }
+    }
+
+    ol {
+      &:not([class]) {}
+    }
+
+    ul {
+      &:not([class]) {}
+    }
+
+    .wp-block-columns {
+      &:not(:last-child) {}
+
+      .wp-block-column {
+        &:first-child {
+          margin-right: 30px;
+          &:not(:empty) {}
+        }
+      }
+    }
+  }
+}

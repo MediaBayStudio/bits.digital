@@ -1,0 +1,318 @@
+@import '../../assets/colors';
+@import '../../assets/mixins';
+@import '../../assets/variables';
+
+#wpadminbar {
+  display: none !important;
+}
+
+html[lang] {
+  margin-top: 0 !important;
+}
+
+[data-scroll-target] {
+  cursor: pointer;
+}
+
+body {
+  font: 300 14px/1.4 $--text-font;
+  color: $white;
+  background: $black;
+
+  // no-scroll is added by open mobile-menu or popups
+  &.no-scroll {
+    overflow: hidden;
+
+    .hdr,
+    .hdr.fixed {
+      overflow-y: scroll;
+      // overflow-y: scroll;
+    }
+  }
+}
+
+.sloping-lines {
+  position: relative;
+
+  &::after {
+    content: '';
+    transform: rotateZ(180deg);
+    background: 0 0/200%;
+    animation: slopingLines 10s linear infinite;
+  }
+}
+
+body.isSafari {
+  .sloping-lines {
+    &::after {
+      background-image: url('img/sloping-lines.mobile.svg')
+    }
+  }
+}
+
+body:not(.isSafari) {
+  .sloping-lines {
+    &::after {
+      background-image: repeating-linear-gradient(-45deg, transparent 0, transparent 10px, $darkGrey 10px, $darkGrey 12px);
+    }
+  }
+}
+
+.icon-corner-arrow {
+  display: inline-block;
+  position: relative;
+
+  &::before {
+    content: '';
+    margin-right: 5px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid;
+    border-top: 0;
+    border-right: 0;
+    transform: rotate(45deg);
+  }
+}
+
+.close-icon {
+  display: block;
+  font-size: 26px;
+  width: 1em;
+  height: 1em;
+  padding: calc(2.5 / 26 * 1em);
+  // position: absolute;
+  // top: calc(20 / 26 * 1em);
+  // right: calc(20 / 26 * 1em);
+  transition: color .5s;
+
+  &:hover {
+    // color: $color;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100.45%;
+    height: 1px;
+    background: currentColor;
+    pointer-events: none;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.text-green {
+  color: $accent;
+}
+
+// Page wrapper
+#page-wrapper {
+  // $--header-height-320 declared in variables.scss
+  padding: $--header-height-320 0 0;
+  // padding: $--header-height-320 $--page-wrapper-padding-320 0;
+  // height: 100%;
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  // &::before,
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   width: 1px;
+  //   height: 100%;
+  //   background: $--decor-border-color;
+  //   z-index: 2;
+  // }
+
+  // &::before {
+  //   left: $--page-wrapper-padding-320;
+  // }
+
+  // &::after {
+  //   right: $--page-wrapper-padding-320;
+  // }
+}
+
+// Elements with loader
+.loading {
+  opacity: 0.5;
+  pointer-events: none;
+
+  .loader {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+
+// img.lazy {
+//   background: url('../img/img-placeholder.svg') center/cover no-repeat;
+// }
+
+// a[href="#"] {
+//   opacity: .5;
+//   pointer-events: none;
+// }
+// 
+
+/* START loader */
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s, visibility .5s;
+  pointer-events: none;
+
+  &__circle {
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    animation: spin .5s linear infinite;
+  }
+
+  &-green {
+    >.loader__circle {
+      border-top-color: $accent;
+      border-left-color: $accent;
+    }
+  }
+
+  // START white loader
+  &-white {
+
+    // background: $color;
+    >.loader__circle {
+      // border-top-color: $color;
+      // border-left-color: $color;
+    }
+  }
+
+  // END white loader
+}
+
+.page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  >.loader__circle {
+    border-width: 5px;
+    width: 50px;
+    height: 50px;
+    border-bottom-color: #42ff5a;
+    animation-duration: .75s;
+  }
+}
+
+/* END loader */
+
+// CF7 Honeypot field
+.cf7-form-field {
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+// Блок с прокруткой, который показывается на всю ширину и высоту страницы страницы
+// нужен для незаметного overflow:hidden у body
+// при вызове мобильного меню или попапов
+#fake-scrollbar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  z-index: 9999;
+  pointer-events: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+// Sections
+
+.sect {
+  &-inner {
+    padding: 0 $--page-wrapper-padding-320 60px;
+    border: 1px solid $--decor-border-color;
+    border-top: 0;
+    border-bottom: 0;
+  }
+
+  &-bg {}
+
+  &-h1 {
+    font: bold 48px/1.2 $--heading-font;
+    letter-spacing: 0.03em;
+  }
+
+  &-h2 {
+    font: bold 24px/1.2 $--heading-font;
+    letter-spacing: 0.02em;
+  }
+
+  &-h3 {
+    font: 600 18px/1.4 $--heading-font;
+    letter-spacing: 0.02em;
+  }
+
+
+  &-descr {}
+
+  &-left {
+    margin-left: -$--page-wrapper-padding-320;
+    margin-bottom: 30px;
+    padding: 15px 20px;
+    width: calc(100% + #{$--page-wrapper-padding-320 * 2});
+    border-bottom: 1px solid $--decor-border-color;
+  }
+}
+
+.sect-underline {
+  border-bottom: 1px solid $--decor-border-color;
+  // position: relative;
+
+  // &::after {
+  //   content: '';
+  //   width: 100vw;
+  //   height: 1px;
+  //   position: absolute;
+  //   left: -$--page-wrapper-padding-320;
+  //   bottom: -1px;
+  //   background: $--decor-border-color;
+  // }
+}
+
+// Standart messages of CF7
+div.wpcf7-response-output,
+span.wpcf7-not-valid-tip,
+.screen-reader-response {
+  display: none !important;
+}

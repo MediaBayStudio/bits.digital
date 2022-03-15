@@ -1,0 +1,28 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.menu {
+  &__hdr {
+    height: $--header-height-768;
+  }
+  &__logo-img {
+    width: 69px;
+    height: 37px;
+  }
+  &__close {
+    font-size: 25px;
+  }
+  &__nav-list {
+    margin: 60px auto 0;
+    max-width: 360px;
+    justify-content: center;
+    font-size: 22px;
+    .nav-link {
+      padding: 32px 0;
+    }
+  }
+  &__ftr {
+    padding: 0 60px;
+  }
+}

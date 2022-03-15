@@ -1,0 +1,89 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.ftr {
+  &__logo-img {
+    margin: 0 0 30px;
+  }
+
+  &__address {
+    margin: 0 0 30px;
+    max-width: 255px;
+    transition: color .5s;
+  }
+
+  &__contacts {
+    margin: 0 0 40px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  &__address,
+  &__tel,
+  &__email {
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__tel {
+    margin: 0 0 10px;
+    transition: color .5s;
+  }
+
+  &__email {
+    transition: color .5s;
+  }
+
+  &__copyright {
+    color: $darkGrey;
+    font-size: 12px;
+  }
+
+  &__dev {
+    margin: 15px 0 0;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  }
+
+  &__dev-text {
+    color: $darkGrey;
+  }
+
+  &__dev-link {
+    &::before {
+      content: '';
+      display: block;
+      width: 82px;
+      height: 15px;
+      background: center/contain no-repeat;
+      transition: filter .5s;
+    }
+
+    &.lazyloaded {
+      &::before {
+        background-image: url('../img/dev-logo.svg');
+      }
+    }
+
+    &:hover {
+      &::before {
+        filter: invert(66%) sepia(98%) saturate(349%) hue-rotate(71deg) brightness(103%) contrast(107%);
+      }
+    }
+  }
+}
+
+.ftr-inner {
+  padding: 30px $--page-wrapper-padding-320 50px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid $--decor-border-color;
+  border-top: 0;
+  border-bottom: 0;
+}
