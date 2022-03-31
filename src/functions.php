@@ -1,5 +1,5 @@
 <?php
-
+setlocale( LC_NUMERIC, 'C' );
 // Globals
 /**
  * @var (string) $version css and js version

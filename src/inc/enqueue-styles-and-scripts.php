@@ -23,6 +23,7 @@ function enqueue_style( $style_name, $widths, $uri = '' ) {
   } else {
     foreach ( $widths as $width ) {
       if ( $width !== "0" ) {
+        // $media = number_format( $width - 0.02, 2, '.', '' );
         $media = $width - 0.02;
          // если размер файла равен 0, то не подключаем его
         if ( filesize( "{$template_directory}/{$style_name}.{$width}.css" ) === 0 ) {

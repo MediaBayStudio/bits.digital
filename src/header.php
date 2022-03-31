@@ -49,12 +49,17 @@ global
   <meta charset="<?php bloginfo('charset') ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- styles preload -->
-  <link rel="preload" as="style" href="<?php echo $template_directory_uri ?>/style.css"> <?php
+  <!-- styles preload --> <?php
 	foreach ( $screen_widths as $screen_width ) :
     echo PHP_EOL;
+    if ( $screen_width === "0" ) {
+      $media = '';
+    } else {
+      $media = ' media="(min-width:' . ($screen_width - 0.02) . 'px)"';
+    }
 		$suffix = $screen_width === '0' ? '' : '.' . $screen_width ?>
-  <link rel="preload" as="style" href="<?php echo "{$template_directory_uri}/css/{$style_name}{$suffix}.css?={$version}" ?>" /> <?php
+  <link rel="preload" as="style"<?php echo $media ?> href="<?php echo "{$template_directory_uri}/style{$suffix}.css?ver={$version}" ?>">
+  <link rel="preload" as="style"<?php echo $media ?> href="<?php echo "{$template_directory_uri}/css/{$style_name}{$suffix}.css?ver={$version}" ?>" /> <?php
 	endforeach;
   echo PHP_EOL ?>
   <!-- fonts preload --> <?php
